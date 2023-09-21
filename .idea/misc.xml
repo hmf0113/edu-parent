@@ -6,6 +6,9 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/edu-gateway-cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/edu-ad-cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/edu-user-cloud/pom.xml" />
+        <option value="$PROJECT_DIR$/edu-role-cloud/pom.xml" />
       </list>
     </option>
   </component>

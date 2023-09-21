@@ -2,9 +2,11 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-
         <module>edu-course-cloud</module>
         <module>edu-commnt-cloud</module>
+        <module>edu-user-cloud</module>
+        <module>edu-ad-cloud</module>
+        <module>edu-role-cloud</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -33,6 +35,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>1.26.2</version>
         </dependency>
         <!-- Spring cloud alibaba nacos客户端的依赖 -->
         <dependency>

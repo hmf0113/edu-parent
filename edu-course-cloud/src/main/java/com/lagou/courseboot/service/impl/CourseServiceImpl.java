@@ -30,7 +30,7 @@ public class CourseServiceImpl implements CourseService {
     @Override
     public PageInfo<Course> findCourseList(CourseVO courseVO) {
         //设置分页参数
-        Page<Course> page = PageHelper.startPage(courseVO.getCurrentPage(), courseVO.getPageSize());
+        PageHelper.startPage(courseVO.getCurrentPage(), courseVO.getPageSize());
         QueryWrapper<Course> qw = new QueryWrapper<>();
         if (courseVO.getCourseName() != null && !courseVO.getCourseName().isEmpty()){
             qw.like("course_name",courseVO.getCourseName());

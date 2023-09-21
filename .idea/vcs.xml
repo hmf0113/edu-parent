@@ -2,6 +2,9 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/edu-ad-cloud" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/edu-gateway-cloud" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/edu-role-cloud" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/edu-user-cloud" vcs="Git" />
   </component>
 </project>

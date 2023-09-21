@@ -2,10 +2,18 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/demo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-ad-cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-ad-cloud/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/edu-commnt-cloud/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/edu-course-cloud/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/edu-gateway-cloud/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/edu-gateway-cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-page-cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-page-cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-role-cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-role-cloud/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-user-cloud/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/edu-user-cloud/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />

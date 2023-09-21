@@ -5,10 +5,9 @@
         <artifactId>edu-parent</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <groupId>com.lagou</groupId>
+
     <artifactId>edu-course-cloud</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>edu-authority-boot</name>
+
     <dependencies>
         <dependency>
             <groupId>com.lagou</groupId>
@@ -30,6 +29,7 @@
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
+
         <!--  mybatis plus  -->
         <dependency>
             <groupId>com.baomidou</groupId>
