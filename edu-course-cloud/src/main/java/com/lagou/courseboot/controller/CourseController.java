@@ -2,7 +2,6 @@ package com.lagou.courseboot.controller;
 
 
 import com.github.pagehelper.PageInfo;
-import com.github.tobato.fastdfs.service.TrackerClient;
 import com.lagou.courseboot.service.CourseService;
 import com.lagou.entity.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.UUID;
 
 @RestController
@@ -39,12 +37,12 @@ public class CourseController {
 
     }
     @PostMapping("courseSalesInfo")
-    public ResponseResult courseSalesInfo(@RequestBody CourseDTO courseDTO){
-        if (courseDTO.getId() == null){
-            courseService.insertCourse(courseDTO);
+    public ResponseResult courseSalesInfo(@RequestBody CourseDT courseDT){
+        if (courseDT.getId() == null){
+            courseService.insertCourse(courseDT);
             return new ResponseResult(true,200,"新增成功",StatusCode.SUCCESS);
         }else {
-            courseService.updateCourse(courseDTO);
+            courseService.updateCourse(courseDT);
             return new ResponseResult(true,200,"修改成功",null);
         }
 
@@ -70,7 +68,7 @@ public class CourseController {
      */
     @GetMapping("findCourseById")
     public ResponseResult findCourseById(@RequestParam("courseId") Integer courseId){
-        CourseDTO courseById = courseService.findCourseById(courseId);
+        CourseDT courseById = courseService.findCourseById(courseId);
         return new ResponseResult(true,200,"查询课程成功",courseById);
     }
     /**

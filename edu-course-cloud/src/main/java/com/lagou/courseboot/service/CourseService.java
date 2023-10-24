@@ -2,6 +2,7 @@ package com.lagou.courseboot.service;
 
 import com.github.pagehelper.PageInfo;
 import com.lagou.entity.Course;
+import com.lagou.entity.CourseDT;
 import com.lagou.entity.CourseDTO;
 import com.lagou.entity.CourseVO;
 import org.springframework.stereotype.Repository;
@@ -25,16 +26,16 @@ public interface CourseService {
     * @param courseDTO
     * @return
     */
-   void insertCourse(CourseDTO courseDTO);
+   void insertCourse(CourseDT courseDT);
 
    /**
     * 修改课程
     * @param courseDTO
     * @return
     */
-   void updateCourse(CourseDTO courseDTO);
+   void updateCourse(CourseDT courseDTO);
 
-   CourseDTO findCourseById(Integer id);
+   CourseDT findCourseById(Integer id);
 
    int updateCourseStatus(Integer status,Integer courseId);
 

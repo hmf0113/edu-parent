@@ -34,7 +34,7 @@ public class CourseContentServiceImpl implements CourseContentService {
         for (CourseSection courseSection : initSection) {
             CourseSectionDTO sectionDTO = new CourseSectionDTO();
             BeanUtils.copyProperties(courseSection,sectionDTO);
-            System.out.println(sectionDTO+"000");
+//            System.out.println(sectionDTO+"000");
             arrayList.add(sectionDTO);
             setCourseLesson(sectionDTO);
         }

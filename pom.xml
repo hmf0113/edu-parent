@@ -7,6 +7,7 @@
         <module>edu-user-cloud</module>
         <module>edu-ad-cloud</module>
         <module>edu-role-cloud</module>
+        <module>edu-course-cloud-8002</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

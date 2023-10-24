@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.util.Date;
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * 用户表(User)实体类
@@ -24,5 +25,9 @@ public class UserVo{
     private Date startCreateTime;
     //注册起始时间false
     private Date DateendCreateTime;
+
+    private List<Integer> roleId;
+
+    private Integer userId;
 }
 

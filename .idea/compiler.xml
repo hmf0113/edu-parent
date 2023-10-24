@@ -10,25 +10,21 @@
         <module name="edu-course-cloud" />
         <module name="edu-commnt-cloud" />
         <module name="edu-role-cloud" />
+        <module name="edu-course-cloud-8002" />
         <module name="edu-user-cloud" />
         <module name="edu-ad-cloud" />
         <module name="edu-gateway-cloud" />
         <module name="edu-page-cloud" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="demo1" target="11" />
-      <module name="edu-page-cloud" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="demo1" options="-parameters" />
       <module name="edu-ad-cloud" options="-parameters" />
       <module name="edu-commnt-cloud" options="-parameters" />
       <module name="edu-course-cloud" options="-parameters" />
+      <module name="edu-course-cloud-8002" options="-parameters" />
       <module name="edu-gateway-cloud" options="-parameters" />
-      <module name="edu-page-cloud" options="-parameters" />
       <module name="edu-role-cloud" options="-parameters" />
       <module name="edu-user-cloud" options="-parameters" />
     </option>

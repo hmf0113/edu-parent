@@ -1,5 +1,7 @@
 package com.lagou.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.lagou.entity.CourseLesson;
 import com.lagou.entity.Teacher;
 import lombok.Data;
@@ -31,7 +33,8 @@ public class CourseDTO implements Serializable {
     /**
      * id
      */
-    @Id
+
+
     private Object id;
     /**
      * 课程名

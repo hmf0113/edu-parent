@@ -12,6 +12,11 @@ spring:
     nacos:
       discovery:
         server-addr: 192.168.200.128:8848
+    sentinel:
+      transport:
+        dashboard: 192.168.200.128:8858
+        port: 8719
+
   redis:
     password: root
 upload:
@@ -49,3 +54,8 @@ fdfs:
       multipart:
         max-file-size: 100MB # 最大支持文件大小
         max-request-size: 100MB # 最大支持请求大小
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

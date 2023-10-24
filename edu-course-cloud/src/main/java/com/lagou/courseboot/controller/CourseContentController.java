@@ -27,7 +27,7 @@ public class CourseContentController {
 
     @GetMapping("findCourseById")
     public ResponseResult findCourseById(@RequestParam("courseId") Integer courseId){
-        return new ResponseResult(true,200,"课程查询成功",courseContentService.findCourseById(courseId));
+        return new ResponseResult(true,200,"课程查询成功8001",courseContentService.findCourseById(courseId));
     }
 
     @PostMapping("saveOrUpdateSection")

@@ -17,12 +17,12 @@ public class Teacher implements Serializable {
      * id
      */
     @TableId(type = IdType.AUTO)
-    private Object id;
+    private Integer id;
 
     /**
      * 课程ID
      */
-    private Object courseId;
+    private Integer courseId;
 
     /**
      * 讲师姓名

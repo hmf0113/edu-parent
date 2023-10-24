@@ -2,16 +2,12 @@ package com.lagou.courseboot.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.lagou.courseboot.mapper.TeacherMapper;
-import com.lagou.entity.Course;
-import com.lagou.entity.CourseDTO;
+import com.lagou.entity.*;
 import com.lagou.courseboot.mapper.CourseMapper;
 import com.lagou.courseboot.service.CourseService;
-import com.lagou.entity.CourseVO;
-import com.lagou.entity.Teacher;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -38,6 +34,7 @@ public class CourseServiceImpl implements CourseService {
         if (courseVO.getStatus() != null){
             qw.eq("status",courseVO.getStatus());
         }
+        qw.orderByAsc("sort_num");
         //执行查询结果
         List<Course> courses = courseMapper.selectList(qw);
         //封装数据到分页里面
@@ -107,30 +104,27 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public void insertCourse(CourseDTO courseDTO) {
+    public void insertCourse(CourseDT courseDTO) {
         Course course = new Course();
         BeanUtils.copyProperties(courseDTO,course);
         Date date = new Date();
-        System.out.println(date);
+
         course.setCreateTime(date);
         course.setUpdateTime(date);
-        int i = courseMapper.insert(course);
-        if (i==1){
+        //course.setId(courseDTO.getId());
+        courseMapper.insert(course);
 
-            Object id = course.getId();
-            System.out.println(id);
-            Teacher teacher = new Teacher();
-            BeanUtils.copyProperties(courseDTO,teacher);
-            teacher.setCourseId(id);
-            teacher.setCreateTime(date);
-            teacher.setUpdateTime(date);
-            teacherMapper.insert(teacher);
-        }
 
+        Teacher teacher = new Teacher();
+        BeanUtils.copyProperties(courseDTO,teacher);
+        teacher.setCourseId(course.getId());
+        teacher.setCreateTime(date);
+        teacher.setUpdateTime(date);
+        teacherMapper.insert(teacher);
     }
 
     @Override
-    public void updateCourse(CourseDTO courseDTO) {
+    public void updateCourse(CourseDT courseDTO) {
         UpdateWrapper<Course> wrapper = new UpdateWrapper<>();
         wrapper.eq("id",courseDTO.getId());
         Course course = new Course();
@@ -145,10 +139,9 @@ public class CourseServiceImpl implements CourseService {
     }
 
     @Override
-    public CourseDTO findCourseById(Integer id) {
+    public CourseDT findCourseById(Integer id) {
+
         return courseMapper.selectCourseWithTeacher(id);
-
-
     }
 
     @Override
@@ -156,7 +149,13 @@ public class CourseServiceImpl implements CourseService {
         UpdateWrapper<Course> wrapper = new UpdateWrapper<>();
         wrapper.eq("id",courseId);
         Course course = new Course();
-        course.setStatus(status);
+        int sta = status;
+        if (status == 0){
+            sta=1;
+        }else {
+            sta=0;
+        }
+        course.setStatus(sta);
         courseMapper.update(course,wrapper);
         Course byId = courseMapper.selectById(courseId);
         return byId.getStatus();

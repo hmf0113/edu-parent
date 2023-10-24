@@ -1,12 +1,12 @@
 package com.lagou.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
-import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 课程(Course)实体类
@@ -21,8 +21,8 @@ public class Course implements Serializable {
     /**
      * id
      */
-    @Id
-    private Object id;
+    @TableId(type = IdType.AUTO)
+    private Integer id;
     /**
      * 课程名
      */
@@ -34,7 +34,7 @@ public class Course implements Serializable {
     /**
      * 原价
      */
-    private Object price;
+    private Double price;
     /**
      * 原价标签
      */
@@ -42,7 +42,7 @@ public class Course implements Serializable {
     /**
      * 优惠价
      */
-    private Object discounts;
+    private Double discounts;
     /**
      * 优惠标签
      */
@@ -50,11 +50,11 @@ public class Course implements Serializable {
     /**
      * 描述markdown
      */
-    private Object courseDescriptionMarkDown;
+    private String courseDescriptionMarkDown;
     /**
      * 课程描述
      */
-    private Object courseDescription;
+    private String courseDescription;
     /**
      * 课程分享图片url
      */
@@ -62,7 +62,7 @@ public class Course implements Serializable {
     /**
      * 是否新品
      */
-    private Object isNew;
+    private Integer isNew;
     /**
      * 广告语
      */
@@ -86,7 +86,7 @@ public class Course implements Serializable {
     /**
      * 是否删除
      */
-    private Object isDel;
+    private Integer isDel;
     /**
      * 总时长(分钟)
      */
